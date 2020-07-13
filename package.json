@@ -1,0 +1,41 @@
+{
+  "name": "cra-template-pwa",
+  "description": "A collection of PWA templates for Create React App",
+  "version": "1.0.0",
+  "author": "Jeff Posnick",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cra-template/pwa"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lerna:publish": "lerna publish",
+    "changelog": "lerna-changelog",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "format:check": "prettier --debug-check \"**/*.{ts,js,json,md}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,html,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lerna": "^3.20.2",
+    "lerna-changelog": "^1.0.1",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5"
+  }
+}
