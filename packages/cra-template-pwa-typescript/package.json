@@ -1,0 +1,27 @@
+{
+  "name": "cra-template-pwa-typescript",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "pwa",
+    "workbox",
+    "service-worker"
+  ],
+  "description": "A progressive web app template for Create React App and TypeScript, using Workbox.",
+  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cra-template/pwa",
+    "directory": "packages/cra-template-pwa-typescript"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
