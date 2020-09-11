@@ -1,6 +1,7 @@
 {
   "package": {
     "dependencies": {
+      "web-vitals": "^0.2.4",
       "workbox-background-sync": "^5.1.3",
       "workbox-broadcast-update": "^5.1.3",
       "workbox-cacheable-response": "^5.1.3",
