@@ -1,6 +1,10 @@
 {
   "package": {
     "dependencies": {
+      "@types/react": "^16.9.49",
+      "@types/react-dom": "^16.9.8",
+      "typescript": "^4.0.2",
+      "web-vitals": "^0.2.4",
       "workbox-background-sync": "^5.1.3",
       "workbox-broadcast-update": "^5.1.3",
       "workbox-cacheable-response": "^5.1.3",
