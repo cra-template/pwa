@@ -19,10 +19,7 @@
       "workbox-streams": "^6.4.2"
     },
     "eslintConfig": {
-      "extends": [
-        "react-app",
-        "react-app/jest"
-      ]
+      "extends": ["react-app", "react-app/jest"]
     }
   }
 }
