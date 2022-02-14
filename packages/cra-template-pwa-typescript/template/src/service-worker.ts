@@ -61,7 +61,7 @@ const urlIsImage = (urlPathName) => {
   const endsWithImage = imgExtensions.filter((extension) =>
     urlPathName.endsWith(extension),
   );
-  return endsWithImage?.length > 0;
+  return endsWithImage.length > 0;
 };
 registerRoute(
   // Add in any other file extensions or routing criteria as needed.
