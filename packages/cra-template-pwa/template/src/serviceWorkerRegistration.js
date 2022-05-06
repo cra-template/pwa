@@ -90,6 +90,26 @@ function registerValidSW(swUrl, config) {
           }
         };
       };
+
+      // in the case a page is loaded an a service worker is already waiting
+      // we should trigger the onUpdate callback
+      const waitingWorker = registration.waiting;
+      if (waitingWorker) {
+        if (navigator.serviceWorker.controller && waitingWorker.state === 'installed') {
+          // At this point, the updated precached content has been fetched,
+          // but the previous service worker will still serve the older
+          // content until all client tabs are closed.
+          console.log(
+            'New content is available and will be used when all ' +
+              'tabs for this page are closed. See https://cra.link/PWA.'
+          );
+
+          // Execute callback
+          if (config && config.onUpdate) {
+            config.onUpdate(registration);
+          }
+        }
+      }
     })
     .catch((error) => {
       console.error('Error during service worker registration:', error);
