@@ -48,9 +48,9 @@ registerRoute(
 
 // An example runtime caching route for requests that aren't handled by the
 // precache, in this case same-origin .png requests like those from in public/
-registerRoute(
-  // Add in any other file extensions or routing criteria as needed.
-  ({ url }) => url.origin === self.location.origin && url.pathname.endsWith('.png'), // Customize this strategy as needed, e.g., by changing to CacheFirst.
+registerRoute
+  // Add in any other file extensions by including the necessary file extension name in the regex, ex. (jpg|png|gif).
+  ({ url }) => url.origin === self.location.origin && /^.*\.(jpg|png)$/i.test(url.pathname), // Customize this strategy as needed, e.g., by changing to CacheFirst.
   new StaleWhileRevalidate({
     cacheName: 'images',
     plugins: [
